@@ -50,7 +50,7 @@ lmOut_update <- glm(Outcome ~ marital + housing + loan + contact + day + month +
 summary(lmOut_update)
 
 library(car)
-
+install.packages('car')
 #vif(lmOut_update)
 
 pred_update = predict(lmOut_update,type = "response")
