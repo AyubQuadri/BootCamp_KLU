@@ -36,12 +36,19 @@ summary(LmOut)
 
 #predicted value VS Actual values
 library(DMwR)
+predicted_train = predict(LmOut, train)
+
+res = residuals(predicted_train)
+residuals.lm(LmOut)
+??residuals
 
 #Error verification on train data
 regr.eval(train$Price, LmOut$fitted.values) 
 
 #Error verification on test data
 Pred<-predict(LmOut,test)
+Residual = residuals(test)
+
 regr.eval(test$Price, Pred)
 
 

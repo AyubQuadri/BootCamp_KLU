@@ -32,6 +32,7 @@ setwd("F:/Sessions/Data Science/Day 9 Mulitple Linear Regression/Lab Activity")
     lmOut = lm(TotalRevenueGenerated ~., data = train)
     summary(lmOut)
     
+ # Step AIC 
     library(MASS)
     step(lmOut, direction = "both")
     Model_AIC = lm(formula = TotalRevenueGenerated ~ City + NoOfChildren + MinAgeOfChild + 

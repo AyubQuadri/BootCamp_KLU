@@ -20,7 +20,7 @@ model = lm(mpg~cyl, data= data)
 summary(model)
 
 # 4. predict the new value
-unseen = data.frame(cyl=4)
+unseen = data.frame(cyl=8)
 predict(model,unseen)
 
 
